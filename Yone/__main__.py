@@ -240,8 +240,8 @@ def yone_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                    [
-                     InlineKeyboardButton(text="Support", url="t.me/Yone_Support"),
-                     InlineKeyboardButton(text="News", url="t.me/Yone_Updates"),
+                     InlineKeyboardButton(text="Support", url="t.me/TEAM_HEARTLESS_POLICE_ONLINE"),
+                     InlineKeyboardButton(text="News", url="t.me/TEAM_HEARTLESS_POLICE_BOTS"),
                    ],
                    [
                     InlineKeyboardButton(text="Back", callback_data="yone_back")
