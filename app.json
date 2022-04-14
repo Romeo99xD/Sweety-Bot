@@ -1,6 +1,6 @@
 {
-    "name": "YoneRobot",
-    "description": "Telegram group management bot.",
+    "name": "Sweety Robot By Romeo",
+    "description": "Telegram group management Super bot.",
     "keywords": [
        "telegram",
        "anime",
@@ -8,7 +8,7 @@
        "manager",
        "yone"
     ],   
- "repository": "https://github.com/noob-kittu/YoneRobot",
+ "repository": "https://github.com/Romeo99xD/Sweety-Bot",
  "addons": [
     {
        "options": {
