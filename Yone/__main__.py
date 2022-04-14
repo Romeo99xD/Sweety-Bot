@@ -83,9 +83,9 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """ Hello *{}*, My name is *{}*! 
-A telegram group management bot. I'm here to help you to manage your groups.
-I have lots of handy features such as:
+PM_START_TEXT = """Hᴇʟʟᴏ Bᴀʙʏ *{}*, I ᴀɴ *{}*! 
+A TᴇʟᴇGʀᴀᴍ Sᴜᴘᴇʀ Pᴏᴡᴇʀ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ Pᴏᴡᴇʀᴇᴅ Bʏ Tᴇᴀᴍ HᴇᴀʀᴛLᴇss. I ᴄᴀɴ Mᴀɴɢᴇ Yᴏᴜʀ Gʀᴏᴜᴘ Cʜᴀᴛ Eᴀsɪʟʏ.
+ɪ ʜᴀᴠᴇ ʟᴏᴛs ᴏғ ᴄᴏᴏʟ ғᴜɴᴄᴛɪᴏɴs ʟɪᴋᴇ :
 ‣ Warning system
 ‣ Artificial intelligence
 ‣ Flood control system
@@ -93,8 +93,8 @@ I have lots of handy features such as:
 ‣ Filters keeping system
 ‣ Approvals and much more.
 
-So what are you waiting for?
-*Add me in your groups and give me full rights to make me function well.*
+Sᴏ ʙᴀʙᴇ Wʜᴀᴛ Aʀᴇ Yᴏᴜ Wᴀɪᴛɪɴɢ Fᴏʀ ???
+*Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Pʀᴇᴄɪᴏᴜs Cʜᴀᴛ Nᴏᴡ !! Wɪᴛʜ Aᴅᴍɪɴ Pᴏᴡᴇʀs Tᴏ ᴡᴏʀᴋ Pʀᴏᴘᴇʀʟʏ.*
 """
 
 
@@ -120,21 +120,21 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⬅️ Bᴀᴄᴋ", callback_data="help_back")]]
                     ),
                 )
                 send_admin_help(
                     update.effective_chat.id,
                     ADMIN[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="admin_back")]]
+                        [[InlineKeyboardButton(text="⬅️ Bᴀᴄᴋ", callback_data="admin_back")]]
                     ),
                 )
                 send_user_help(
                     update.effective_chat.id,
                     USER[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="user_back")]]
+                        [[InlineKeyboardButton(text="⬅️ Bᴀᴄᴋ", callback_data="user_back")]]
                     ),
                 )
                 send_tools_help(
@@ -164,22 +164,22 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup([
     [
         InlineKeyboardButton(
-            text="➕️ Add me to your chat ➕️", url=f"https://t.me/{context.bot.username}?startgroup=true"),
+            text="➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕️", url=f"https://t.me/{context.bot.username}?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="Admin", callback_data="admin_back"),
+        InlineKeyboardButton(text="Aᴅᴍɪɴs 😎", callback_data="admin_back"),
         InlineKeyboardButton(
-            text="Users", callback_data="user_back"
+            text="Usᴇʀs 😇", callback_data="user_back"
         ),
     ],
     [
         InlineKeyboardButton(text="Tools", callback_data="tools_back"),
         InlineKeyboardButton(
-            text="Bot Info", callback_data="yone_"
+            text="Bᴏᴛ Iɴғᴏ", callback_data="yone_"
         ),
     ],
     [
-        InlineKeyboardButton(text="Helps & Commands❔", callback_data="help_back"),
+        InlineKeyboardButton(text="𝐇ᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs 🔎", callback_data="help_back"),
     ],
 ]),
                 parse_mode=ParseMode.MARKDOWN,
@@ -189,20 +189,20 @@ def start(update: Update, context: CallbackContext):
             text = (
                 f"Hello {mention_html(user.id, user.first_name)}, I'm {bot.first_name}\n\n"
                 f"┏━━━━━━━━━━━━━━━━━━━\n"
-                f"┣[• Owner : @{OWNER_USERNAME}  \n"
-                f"┣[• Uptime : {uptime} \n"
-                f"┣[• Core : {psutil.cpu_percent()}%\n"
-                f"┣[• Python   : Ver {python_version()} \n"
+                f"┣[• 𝐎𝐰𝐧𝐞𝐫 : @{OWNER_USERNAME}  \n"
+                f"┣[• 𝐔𝐩𝐓𝐢𝐦𝐞 : {uptime} \n"
+                f"┣[• 𝐂𝐨𝐫𝐞 : {psutil.cpu_percent()}%\n"
+                f"┣[• 𝐏𝐲𝐭𝐡𝐨𝐧   : Ver {python_version()} \n"
                 f"┗━━━━━━━━━━━━━━━━━━━")
         
 
             keyboard = InlineKeyboardMarkup([
                 [
                     InlineKeyboardButton(
-                        text="SUPPORT", 
+                        text="Sᴜᴘᴘᴏʀᴛ", 
                         url=f"https://t.me/{SUPPORT_CHAT}"),
                     InlineKeyboardButton(
-                        text="DEVLOPER", 
+                        text="DᴇᴠLᴏᴘᴇʀ", 
                         url=f"https://t.me/{OWNER_USERNAME}")
                     
                 ],
@@ -225,7 +225,7 @@ def yone_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "yone_":
         query.message.edit_text(
-            text="""Hello *{}*, My name is *{}*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
+            text="""Hᴇʟʟᴏ *{}*, I ᴀᴍ *{}*. A ᴘᴏᴡᴇʀғᴜʟ TᴇʟᴇGʀᴀᴍ Gʀᴏᴜᴘ Sᴜᴘᴇʀ Bᴏᴛ Tᴏ Mᴀɴᴀɢᴇ Yᴏᴜʀ Pʀᴇᴄɪᴏᴜs Gʀᴏᴜᴘ Eᴀsɪʟʏ.
             \n ‣ I can Restrict Users.
             \n ‣ I can Greet Users with customizable welcome message and even set a group rules
             \n ‣ I have an advanced Anti-Flood System which will help you to safe group from Spammmer.
@@ -233,18 +233,18 @@ def yone_about_callback(update: Update, context: CallbackContext):
             \n ‣ I have Note Keeping System, Blacklists, And even Predetermined replies on certain keywords.
             \n ‣ I check Admins Permissions before perform any Command and more Stuffs.
             \n ‣ I have an advanced Artificial Chatbot System, so can talk with users like humans.
-            \n\n*If you have any Question, You can join Support Chat. My Developer Team will Answer. Check Link Below*""".format(
+            \n\n*Iғ Yᴏᴜ Aʀᴇ Fᴀᴄɪɴɢ Aɴʏ Pʀᴏʙʟᴇᴍ Rᴇɢᴀʀᴅɪɴɢ Mᴇ Tʜᴇɴ Kɪɴᴅʟʏ Rᴇᴘᴏʀᴛ Iɴ Mʏ Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ.*""".format(
                         escape_markdown(first_name), escape_markdown(context.bot.first_name)),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                    [
-                     InlineKeyboardButton(text="Support", url="t.me/TEAM_HEARTLESS_POLICE_ONLINE"),
-                     InlineKeyboardButton(text="News", url="t.me/TEAM_HEARTLESS_POLICE_BOTS"),
+                     InlineKeyboardButton(text="⚙️ Sᴜᴘᴘᴏʀᴛ", url="t.me/TEAM_HEARTLESS_POLICE_ONLINE"),
+                     InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇs 📡", url="t.me/TEAM_HEARTLESS_POLICE_BOTS"),
                    ],
                    [
-                    InlineKeyboardButton(text="Back", callback_data="yone_back")
+                    InlineKeyboardButton(text="🔙 Bᴀᴄᴋ", callback_data="yone_back")
                    ]
                 ]
             ),
@@ -256,18 +256,18 @@ def yone_about_callback(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup([
     [
         InlineKeyboardButton(
-            text="➕️ Add me to your chat ➕️", url=f"https://t.me/{context.bot.username}?startgroup=true"),
+            text="➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕️", url=f"https://t.me/{context.bot.username}?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="Admin", callback_data="admin_back"),
+        InlineKeyboardButton(text="Aᴅᴍɪɴs", callback_data="admin_back"),
         InlineKeyboardButton(
-            text="Users", callback_data="user_back"
+            text="Usᴇʀs", callback_data="user_back"
         ),
     ],
     [
         InlineKeyboardButton(text="Tools", callback_data="tools_back"),
         InlineKeyboardButton(
-            text="Bot Info", callback_data="yone_"
+            text="Bᴏᴛ Iɴғᴏ", callback_data="yone_"
         ),
     ],
     [
